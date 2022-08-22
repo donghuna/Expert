@@ -31,20 +31,20 @@ void mergeSort(int*arr, int s, int e) {
     for (int i = s; i <= e; ++i) arr[i] = trr[i];
 }
 
-int abs(int a) { return a < 0 ? -a : a; }
+int abs(int a) { return a < 0 ? -a : a; }       // abs
 
 int main() {
 #ifdef _WIN32
     freopen("input.txt", "r", stdin);
 #endif // _WIN32
     scanf("%d %d", &N, &M);
-    for (int i = 1; i <= M; ++i) {
+    for (int i = 1; i <= M; ++i) {               // 1 base
         scanf("%d %d", row + i, col + i);
     }
-    mergeSort(row, 1, M);
+    mergeSort(row, 1, M);                   // 입력받은 좌표값들을 sorting.
     mergeSort(col, 1, M);
 
-    int mr = row[(M + 1) / 2];
+    int mr = row[(M + 1) / 2];              // sorting 하여 배열에서 바로 중앙값을 알아낸다. (속도가 여기서 훨씬 빨라짐)
     int mc = col[(M + 1) / 2];
     for (int i = 1; i <= M; ++i) {
         ans += abs(row[i] - mr);
