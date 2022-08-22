@@ -10,11 +10,9 @@ URL : http://codepass.co.kr/bbs/bbs_solve_lecture.php?idx=135&prod_idx=1870&pCod
 
 ---
 
-격자의 크기는 10,000 x 10,000.
-
-점 개수는 100,000
-
 [풀이]
+
+중앙값으로 모으는게 가장 이득이다! (제일 중요)
 
 배열을 만들 필요는 없다.
 
